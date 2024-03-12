@@ -2,12 +2,17 @@ import {ImageBackground, StatusBar, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import CarItem from './src/components/CarItem';
 
+
 const App = () => {
   return (
     <View style={styles.container}>
-    <CarItem/>
+      <CarItem>
+     
+      </CarItem>
 
-      <StatusBar style='auto'/>
+      
+
+      <StatusBar style="auto" />
     </View>
   );
 };
@@ -20,6 +25,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  }
-  
+  },
 });
