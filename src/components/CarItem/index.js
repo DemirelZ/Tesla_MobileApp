@@ -3,16 +3,17 @@ import React from 'react';
 import {styles} from './style';
 import StyledButton from '../StyledButton';
 
-const CarItem = () => {
+const CarItem = props => {
+  const {name, tagline, image, taglineCTA} = props.car;
+
   return (
     <View style={styles.carContainer}>
-      <ImageBackground
-        style={styles.image}
-        source={require('../../../assets/images/ModelS.jpeg')}
-      />
+      <ImageBackground style={styles.image} source={image} />
       <View style={styles.titles}>
-        <Text style={styles.title}>Model S</Text>
-        <Text style={styles.subTitle}>Starting at $69,420</Text>
+        <Text style={styles.title}>{name}</Text>
+        <Text style={styles.subTitle}>
+          {tagline} <Text style={styles.tagLineCTA}>{taglineCTA}</Text>
+        </Text>
       </View>
       <View style={styles.buttonContainer}>
         <StyledButton
